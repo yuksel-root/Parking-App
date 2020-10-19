@@ -1,0 +1,42 @@
+﻿
+<!DOCTYPE html>
+<html>
+<head>
+    @addTagHelper *,Microsoft.AspNetCore.Mvc.TagHelpers
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <link href="~/twitter-bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+</head>
+<body>
+    @* Navbar *@
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <div class="container">
+            <a class=" btn btn-success float-left" asp-action="Index"
+               asp-controller="Home">Asp Net Core Parking App</a>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active">
+                        <a asp-action="AddCar" asp-controller="Home" class="btn btn-warning mr-3">
+                            New Car Entry
+                        </a>
+                    </li>
+                    <li class="nav-item active">
+                        <a asp-action="Index" asp-controller="Parking" class="btn btn-warning">
+                           Sections Process
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    @* Navbar  *@
+
+    <div class="mt-2">
+        <div class="container-fluid">
+            @RenderBody()
+        </div>
+
+    </div>
+    @RenderSection("JavaScript",false)
+</body>
+</html>

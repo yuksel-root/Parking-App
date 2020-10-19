@@ -1,0 +1,17 @@
+﻿@model UpdateParkingModel
+
+<form asp-action="UpdateParking" asp-controller="Parking" method="post"
+      class="w-75 mx-auto p-3" enctype="multipart/form-data">
+
+    <input type="hidden" asp-for="@Model.Id" />
+    <div class="form-group">
+        <label>Car Brand:</label>
+        <span asp-validation-for="@Model.Section" class="text-danger"></span>
+        <input asp-for="@Model.Section" class="form-control" />
+    </div>
+
+    <div class="form-group">
+        <a asp-action="Index" asp-controller="Parking" class="btn btn-warning">Turn Back</a>
+        <button type="submit" class="btn btn-primary">Enter</button>
+    </div>
+</form>

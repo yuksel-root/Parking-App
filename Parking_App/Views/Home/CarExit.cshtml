@@ -1,0 +1,41 @@
+﻿@model Car
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-3">
+            <img src="/img/@Model.Image" class="w-100 img-thumbnail img-fluid" alt="@Model.Brand" />
+
+        </div>
+        <div class="col-md-9">
+            <div class="card">
+                @ViewBag.Cookie
+                <h5 class="card-header">Brand:@Model.Brand</h5>
+                <div class="card-body">
+                    <p class="card-text">Plate:@Model.Plate</p>
+                    <p class="card-text">
+                        <strong>Parkings : </strong> <getParkingSection car-id="@Model.Id"></getParkingSection>
+                    </p>
+                    <p class="card-text">Entry_date:@Model.Start_date</p>
+                    <p class="card-text">Expire_date:@Model.End_date</p>
+                    <a asp-action="RemoveCar" asp-controller="Home" asp-route-id="@Model.Id"
+                       class="btn btn-danger mr-3 float-left">Exit the Parking</a>
+                    <a asp-action="UpdateCar" asp-controller="Home"
+                       asp-route-id="@Model.Id"
+                       class="btn btn-success  float-left mr-3">Update to Car</a>
+                    <a asp-action="Index" asp-controller="Home" class="btn btn-warning
+                   float-left">Turn Back</a>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</div>
+
+
+
+
+
+

@@ -1,0 +1,28 @@
+﻿@model List<Parking>
+
+<div class="row">
+
+    @foreach (var item in Model)
+    {
+        <div class="col-md-2">
+            <div class="card" style="width: 10rem;margin:1.8rem;">
+                <div class="card-body">
+                    <h5 class="card-title">Parking Locations</h5>
+                    <p class="card-text"><b>p:</b> @item.Section</p>
+
+
+                    @* localhost/Home/CarExit/?id=1&page=3 asp-route-page="3" *@
+                    <a style="color:white;" asp-action="AddParking" asp-controller="Parking"
+                       asp-route-id="@item.Id" class="btn btn-primary float-right">Add Section</a>
+                    <a asp-action="RemoveParking" asp-controller="Parking" asp-route-id="@item.Id"
+                       class="btn btn-danger mr-3 float-left">Remove Section</a>
+                    <a asp-action="UpdateParking" asp-controller="Parking"
+                       asp-route-id="@item.Id"
+                       class="btn btn-success  float-left mr-3">Update to Section</a>
+
+                </div>
+            </div>
+
+        </div>
+    }
+</div>

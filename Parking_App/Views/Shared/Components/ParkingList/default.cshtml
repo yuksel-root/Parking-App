@@ -1,0 +1,13 @@
+﻿@model List<Parking>
+
+
+<div class="list-group">
+   
+    @foreach (var parking in Model)
+    {
+        <a href="#" class="list-group-item list-group-item-action ">
+            @parking.Section
+        </a>
+    }
+
+</div>

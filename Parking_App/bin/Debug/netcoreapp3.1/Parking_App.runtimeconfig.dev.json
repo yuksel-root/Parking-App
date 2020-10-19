@@ -1,0 +1,8 @@
+{
+  "runtimeOptions": {
+    "additionalProbingPaths": [
+      "C:\\Users\\yuksel\\.dotnet\\store\\|arch|\\|tfm|",
+      "C:\\Users\\yuksel\\.nuget\\packages"
+    ]
+  }
+}
